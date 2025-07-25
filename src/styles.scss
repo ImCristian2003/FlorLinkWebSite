@@ -1,0 +1,537 @@
+$softRose: #e8b7ba;
+$teal_blue: #318f96;
+$deepRose: #82385d;
+$mostach_yellow: #e0a800;
+$ligth_gray: #f5f5f5;
+$letter_color: #b9b7cf;
+$border_color: #ececec;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  background-color: $softRose;
+  border-bottom: 7px $deepRose solid;
+  border-bottom-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+
+  .nav-link {
+    color: #e6e7ec;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #e6e7ec;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .active-link {
+    color: #e6e7ec;
+    font-weight: bold;
+  }
+
+  .active-link:focus {
+    color: #e6e7ec;
+    font-weight: bold;
+  }
+
+  a.navbar-brand {
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 5px 0px 1px $deepRose inset, 5px 0px 1px $deepRose;
+    font-family: "Delicious Handrawn", cursive;
+    font-size: 2rem !important;
+    margin: 0 1.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .a-rol {
+    color: #526b85;
+  }
+}
+
+.container-login {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  .container-left {
+    height: 100vh;
+    width: 60%;
+
+    @include flex-center;
+
+    .container-left-det {
+      height: 60%;
+      width: 60%;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      form {
+        padding: 1rem;
+
+        input {
+          display: block;
+          margin: auto;
+          padding: 0.8rem;
+          width: 80%;
+        }
+
+        button {
+          display: block;
+          margin: 2rem auto;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .container-right {
+    background-image: url(assets/img/flowers-login.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    height: calc(100vh - 20px);
+    margin: 10px;
+    width: 40%;
+  }
+}
+
+/********************************PERFORMANCE EVALUATION SECTION*************************/
+
+/****CONTAINER PERFORMANCE EVALUATION****/
+.title-evaluation {
+  margin-top: 2rem;
+}
+
+/****CONTAINER BUTTONS****/
+.buttons-container {
+  height: 50vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  button {
+    background-color: $deepRose;
+    border: none;
+    border-radius: 20px;
+    color: #e6e7ec;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 1rem 2rem;
+    width: 30%;
+  }
+}
+
+.modal-body {
+  .table-estimados {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0 3px;
+
+    thead th {
+      background-color: transparent;
+      border: none;
+      color: #a8a8a8;
+    }
+
+    tbody tr td {
+      background-color: #fff;
+      border: none;
+      color: #292a28;
+      padding: 0.6rem 0rem;
+
+      .btn-estimados-semana {
+        background-color: rgb(72, 104, 139, 0.8);
+        border: none;
+        border-radius: 20px;
+        color: #e0e0e0;
+        margin: auto;
+        padding: 4px 0px;
+        width: 70%;
+      }
+    }
+
+    tbody tr td:first-child {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-left: $border_color solid 2px;
+      border-right: none;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    tbody tr td.td-border-tb {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-right: none;
+      border-left: none;
+    }
+
+    tbody tr td:last-child {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-right: $border_color solid 2px;
+      border-left: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+.container-ofrecimiento {
+  background-color: #fff;
+  width: 100%;
+
+  h1 {
+    color: #292a28;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .cont-search {
+    margin-bottom: 2rem;
+    width: 100%;
+
+    display: flex;
+
+    .cont-filters {
+      width: 60%;
+
+      display: flex;
+      justify-content: space-around;
+
+      input[type="search"] {
+        border: 1px solid #dee2e6;
+        border-radius: 1rem;
+        padding: 0.8rem;
+        width: 40%;
+      }
+
+      input[type="search"]:hover {
+        border: 1px solid #dee2e6;
+      }
+
+      select {
+        width: 25%;
+      }
+
+      input[type="search"]:focus,
+      select:focus {
+        border: 1px solid rgb(115, 114, 114) !important;
+        box-shadow: 0 0 3px 2px rgba(141, 140, 140, 0.5);
+      }
+    }
+
+    .cont-modals {
+      width: 40%;
+
+      display: flex;
+      justify-content: end;
+      // .btn-estimados {
+      // }
+    }
+  }
+
+  .table-ofrecimiento {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0 3px;
+
+    thead th {
+      background-color: transparent;
+      border: none;
+      color: #a8a8a8;
+    }
+
+    tbody tr td {
+      background-color: #fff;
+      border: none;
+      color: #292a28;
+      padding: 0.6rem 0rem;
+
+      .btn-total-tallos {
+        background-color: rgb(72, 104, 139, 0.8);
+        border-radius: 20px;
+        color: #e0e0e0;
+        margin: auto;
+        padding: 4px 0px;
+        width: 70%;
+      }
+    }
+
+    tbody tr td:first-child {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-left: $border_color solid 2px;
+      border-right: none;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    tbody tr td.td-border-tb {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-right: none;
+      border-left: none;
+    }
+
+    tbody tr td:last-child {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-right: $border_color solid 2px;
+      border-left: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+.container-reservas {
+  h1 {
+    text-shadow: 4px 0px 3px #b9b7cf;
+    color: #292a28;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .table-reservas {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0 3px;
+
+    thead th {
+      background-color: transparent;
+      border: none;
+      color: #a8a8a8;
+    }
+
+    tbody tr td {
+      background-color: #fff;
+      border: none;
+      color: #292a28;
+      padding: 0.6rem 0rem;
+
+      .btn-total-tallos {
+        background-color: rgb(72, 104, 139, 0.8);
+        border-radius: 20px;
+        color: #e0e0e0;
+        margin: auto;
+        padding: 4px 0px;
+        width: 70%;
+      }
+    }
+
+    tbody tr td:first-child {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-left: $border_color solid 2px;
+      border-right: none;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      padding-left: 0.7rem;
+    }
+
+    tbody tr td.td-border-tb {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-right: none;
+      border-left: none;
+    }
+
+    tbody tr td:last-child {
+      border-bottom: $border_color solid 2px;
+      border-top: $border_color solid 2px;
+      border-right: $border_color solid 2px;
+      border-left: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding-right: 0.7rem;
+    }
+  }
+}
+
+.form-reservas {
+  input,
+  textarea,
+  select {
+    border: rgba(221, 223, 222, 0.8) solid 2px;
+    padding: 0.7rem 1rem;
+  }
+}
+
+.modal {
+  .form-control:focus,
+  textarea:focus,
+  select:focus {
+    border-color: rgba(221, 223, 222, 0.8); /* Cambia el color del borde */
+    box-shadow: 3px 3px 6px rgba(221, 223, 222, 0.8);
+  }
+}
+
+.abrir-modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.animacion {
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+}
+
+.btnAction {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  height: 100%;
+  padding: 0px 0px;
+  width: 100%;
+}
+
+.tdCustomice {
+  padding: 0;
+}
+
+.td-info {
+  width: 100%;
+
+  display: flex;
+  padding: 0;
+
+  .info-tooltip {
+    padding: 0;
+    width: 20%;
+  }
+}
+
+.tooltip-trigger-info {
+  height: 100%;
+  padding: 0;
+  width: 100%;
+
+  @include flex-center;
+}
+
+.modal-dialog {
+  width: 100%;
+}
+
+.modal-content {
+  width: 100%;
+}
+
+.info-main {
+  width: 100%;
+
+  @include flex-center;
+  flex-direction: column;
+}
+
+.info-table {
+  margin-top: 10px;
+  width: 100%;
+
+  @include flex-center;
+}
+
+.info-table table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+.cont-total-tallos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-tallos,
+.input-ramos,
+.input-cajas,
+.label-total {
+  text-align: center;
+  width: 20%;
+}
+
+.label-total {
+  background-color: $deepRose;
+  border-radius: 1rem;
+  color: #d3d0d0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 100%;
+
+  @include flex-center;
+}
+
+.btn {
+  background-color: $deepRose;
+  border: none;
+  color: #e6e7ec;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 0.7rem 2rem;
+}
+
+.btn:hover {
+  background-color: #6a2849;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
