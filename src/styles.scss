@@ -200,6 +200,44 @@ nav {
   }
 }
 
+#evaluador-select,
+#evaluado-select {
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 0.3rem;
+  width: 45%;
+
+  select {
+    width: 100%;
+    padding: 0.7rem;
+    border: rgba(221, 223, 222, 0.8) solid 2px;
+    border-radius: 5px;
+  }
+
+  select:focus {
+    border-color: rgba(221, 223, 222, 0.8);
+    box-shadow: 3px 3px 6px rgba(221, 223, 222, 0.8);
+  }
+}
+
+button[type="submit"] {
+  background-color: $deepRose;
+  border: none;
+  border-radius: 20px;
+  color: #e6e7ec;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 3rem;
+  padding: 0.7rem 2rem;
+  width: 20%;
+}
+
+button[type="submit"]:disabled {
+  background-color: #b9b7cf;
+  color: #fff;
+  cursor: not-allowed;
+}
+
 .container-ofrecimiento {
   background-color: #fff;
   width: 100%;
