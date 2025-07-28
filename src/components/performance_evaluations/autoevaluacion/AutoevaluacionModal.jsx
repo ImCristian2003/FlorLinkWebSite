@@ -377,7 +377,9 @@ export const AutoevaluacionModal = () => {
                     ))}
                   </div>
 
-                  <button type="submit">Enviar</button>
+                  <button type="submit" disabled={observaciones ? false : true}>
+                    Enviar
+                  </button>
                 </form>
               </div>
 
@@ -918,7 +920,9 @@ export const AutoevaluacionModal = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="observaciones">Observaciones:</label>
+                  <label htmlFor="observaciones">
+                    <b style={{ color: "red" }}>*</b> Observaciones:
+                  </label>
                   <p>Ten en cuenta las siguientes preguntas abiertas:</p>
                   <p>
                     ¿Qué acciones concretas podrías implementar para vivir más

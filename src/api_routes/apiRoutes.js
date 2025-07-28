@@ -14,3 +14,10 @@ export const EMPLEADO_URL = "https://florlinkbackend.onrender.com/empleado";
 export const EVALUACION_URL =
   "https://florlinkbackend.onrender.com/evaluacion-desempenio";
 export const PREGUNTA_URL = "https://florlinkbackend.onrender.com/preguntas";
+
+// export const OFRECIMIENTO_RESERVA_URL =
+//   "http://localhost:8081/OfrecimientoReserva";
+
+// export const EMPLEADO_URL = "http://localhost:3000/empleado";
+// export const EVALUACION_URL = "http://localhost:3000/evaluacion-desempenio";
+// export const PREGUNTA_URL = "http://localhost:3000/preguntas";

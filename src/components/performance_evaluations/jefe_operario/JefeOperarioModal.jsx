@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { PerformanceEvaluation } from "../../../context/PerformanceEvaluation/PerformanceEvaluationContext";
+import { useEffect } from "react";
 
 export const JefeOperarioModal = () => {
   const {
@@ -388,7 +389,9 @@ export const JefeOperarioModal = () => {
                     ))}
                   </div>
 
-                  <button type="submit">Enviar</button>
+                  <button type="submit" disabled={observaciones ? false : true}>
+                    Enviar
+                  </button>
                 </form>
               </div>
 
@@ -906,7 +909,9 @@ export const JefeOperarioModal = () => {
                 </div>
                 <br />
                 <div>
-                  <label htmlFor="observaciones">Observaciones:</label>
+                  <label htmlFor="observaciones">
+                    <b style={{ color: "red" }}>*</b> Observaciones:
+                  </label>
                   <p>Ten en cuenta las siguientes preguntas abiertas:</p>
                   <p>
                     ¿Qué observaciones podrías hacerle a tu colaborador para

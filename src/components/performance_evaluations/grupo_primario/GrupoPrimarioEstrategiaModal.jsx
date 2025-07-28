@@ -337,7 +337,9 @@ export const GrupoPrimarioEstrategiaModal = () => {
                     ))}
                   </div>
 
-                  <button type="submit">Enviar</button>
+                  <button type="submit" disabled={observaciones ? false : true}>
+                    Enviar
+                  </button>
                 </form>
               </div>
 
@@ -655,7 +657,9 @@ export const GrupoPrimarioEstrategiaModal = () => {
                 </form>
                 <br />
                 <div>
-                  <label htmlFor="observaciones">Observaciones:</label>
+                  <label htmlFor="observaciones">
+                    <b style={{ color: "red" }}>*</b> Observaciones:
+                  </label>
                   <p>Ten en cuenta las siguientes preguntas abiertas:</p>
                   <p>
                     ¿Qué observaciones podrías hacerle a tu colaborador para

@@ -360,7 +360,9 @@ export const ColaboradorJefeModal = () => {
                     ))}
                   </div>
 
-                  <button type="submit">Enviar</button>
+                  <button type="submit" disabled={observaciones ? false : true}>
+                    Enviar
+                  </button>
                 </form>
               </div>
 
@@ -742,7 +744,9 @@ export const ColaboradorJefeModal = () => {
                 </form>
                 <br />
                 <div>
-                  <label htmlFor="observaciones">Observaciones:</label>
+                  <label htmlFor="observaciones">
+                    <b style={{ color: "red" }}>*</b> Observaciones:
+                  </label>
                   <p>Ten en cuenta las siguientes preguntas abiertas:</p>
                   <p>¿Qué cualidades destacas de tu jefe como líder?</p>
                   <p>

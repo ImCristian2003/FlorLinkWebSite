@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PerformanceEvaluation } from "../../../context/PerformanceEvaluation/PerformanceEvaluationContext";
 
 export const GrupoPrimarioLiderazgoModal = () => {
   const {
-    setGrupoPrimarioVisible,
     empleados,
     createEvaluacion,
     createPregunta,
     idEvaluacion,
     setNewIdEvaluacion,
     setGrupoPrimarioLVisible,
+    visibleGrupoPrimarioL,
   } = useContext(PerformanceEvaluation);
 
   // Manejo del evaluador y evaluado selecionado juntos a las respuestas
@@ -409,7 +409,9 @@ export const GrupoPrimarioLiderazgoModal = () => {
                     ))}
                   </div>
 
-                  <button type="submit">Enviar</button>
+                  <button type="submit" disabled={observaciones ? false : true}>
+                    Enviar
+                  </button>
                 </form>
               </div>
 
@@ -931,7 +933,9 @@ export const GrupoPrimarioLiderazgoModal = () => {
                 </form>
                 <br />
                 <div>
-                  <label htmlFor="observaciones">Observaciones:</label>
+                  <label htmlFor="observaciones">
+                    <b style={{ color: "red" }}>*</b> Observaciones:
+                  </label>
                   <p>Ten en cuenta las siguientes preguntas abiertas:</p>
                   <p>
                     ¿Qué observaciones podrías hacerle a tu colaborador para
